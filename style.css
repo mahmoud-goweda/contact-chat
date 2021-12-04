@@ -4,6 +4,7 @@
     margin: 1em;
     right: 0;
     z-index: 998;
+    transform: scale(1);
 }
 
 
@@ -245,7 +246,11 @@
 
 body {
     height: 300vh;
-    overflow: scroll;
+    /* overflow: hidden; */
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    width: 100%;
 }
 
 
@@ -255,14 +260,14 @@ body {
     }
 } */
 
-
-/* @media screen and (min-width: 700px) and (max-width: 1024px) {
+@media screen and (min-width: 700px) and (max-width: 1024px) {
     .fabs {
         transform: scale(1.5);
     }
 }
 
-@media (min-width: 400px) and (max-width: 689px) {
+
+/* @media (min-width: 400px) and (max-width: 689px) {
     .fabs {
         transform: scale(2.5);
     }
@@ -270,4 +275,6 @@ body {
 
 .h-scale {
     transform: scale(2.5);
+    bottom: 57px;
+    right: 52px;
 }
