@@ -158,6 +158,9 @@
     .chat {
         width: 60px;
     }
+    .contactmessege-button-popup {
+        right: -14px;
+    }
 }
 
 
@@ -169,6 +172,9 @@
     }
     .chat_field {
         width: 65%;
+    }
+    .contactmessege-button-popup {
+        right: 0;
     }
 }
 
@@ -260,21 +266,24 @@ body {
     }
 } */
 
-@media screen and (min-width: 700px) and (max-width: 1024px) {
+
+/* @media screen and (min-width: 500px) and (max-width: 1024px) {
     .fabs {
         transform: scale(1.5);
     }
-}
-
-
-/* @media (min-width: 400px) and (max-width: 689px) {
-    .fabs {
-        transform: scale(2.5);
-    }
 } */
 
-.h-scale {
-    transform: scale(2.5);
-    bottom: 57px;
-    right: 52px;
+@media screen and (min-width: 500px) and (max-width: 1024px) {
+    /* .fabs {
+        transform: scale(1.5);
+    } */
+}
+
+@media screen and (min-width: 200px) and (max-width: 500px) {
+    /* .fabs {
+        transform: scale(2.5);
+    } */
+    .contactmessege-button-popup {
+        right: -14px!important;
+    }
 }
