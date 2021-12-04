@@ -6,6 +6,13 @@
     z-index: 998;
 }
 
+
+/* @media (max-width:600px) {
+    .fabs {
+        transform: scale(2.5);
+    }
+} */
+
 .fab {
     display: block;
     width: 56px;
@@ -239,4 +246,66 @@
 body {
     height: 300vh;
     overflow: scroll;
+}
+
+
+/* @media (min-width:768px) {
+    .fabs {
+        transform: scale(2.5);
+    }
+} */
+
+
+/* @media screen and (min-width: 700px) and (max-width: 1024px) {
+    .fabs {
+        transform: scale(1.5);
+    }
+}
+
+@media (min-width: 400px) and (max-width: 689px) {
+    .fabs {
+        transform: scale(2.5);
+    }
+} */
+
+@media (min-width:961px) {
+    /* tablet, landscape iPad, lo-res laptops ands desktops */
+    .fabs {
+        transform: scale(1);
+    }
+}
+
+@media (min-width:1025px) {
+    /* big landscape tablets, laptops, and desktops */
+    .fabs {
+        transform: scale(1);
+    }
+}
+
+@media (min-width:1281px) {
+    /* hi-res laptops and desktops */
+    .fabs {
+        transform: scale(1);
+    }
+}
+
+@media (min-width:320px) {
+    /* smartphones, iPhone, portrait 480x320 phones */
+    .fabs {
+        transform: scale(2.5);
+    }
+}
+
+@media (min-width:481px) {
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+    .fabs {
+        transform: scale(2.5);
+    }
+}
+
+@media (min-width:641px) {
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    .fabs {
+        transform: scale(1);
+    }
 }
