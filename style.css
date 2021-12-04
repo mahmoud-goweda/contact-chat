@@ -1,0 +1,242 @@
+.fabs {
+    bottom: 0;
+    position: fixed;
+    margin: 1em;
+    right: 0;
+    z-index: 998;
+}
+
+.fab {
+    display: block;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    text-align: center;
+    color: #f0f0f0;
+    margin: 25px auto 0;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .14), 0 4px 8px rgba(0, 0, 0, .28);
+    cursor: pointer;
+    -webkit-transition: all .1s ease-out;
+    transition: all .1s ease-out;
+    position: relative;
+    z-index: 998;
+    overflow: hidden;
+    /* background: #42a5f5; */
+    background: rgb(134, 205, 145);
+}
+
+.fab>i {
+    font-size: 2em;
+    line-height: 55px;
+    -webkit-transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.fab:active,
+.fab:focus,
+.fab:hover {
+    box-shadow: 0 0 6px rgba(0, 0, 0, .16), 0 6px 12px rgba(0, 0, 0, .32);
+}
+
+
+/*Chatbox*/
+
+.chat {
+    position: fixed;
+    right: 20px;
+    height: 126px;
+    bottom: 83px;
+    width: 70px;
+    font-size: 12px;
+    line-height: 22px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    opacity: 0;
+    /* box-shadow: 1px 1px 100px 2px rgba(0, 0, 0, 0.22); */
+    border-radius: 10px;
+    -webkit-transition: all .2s ease-out;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.chat.is-visible {
+    opacity: 1;
+    -webkit-animation: zoomIn .2s cubic-bezier(.42, 0, .58, 1);
+    animation: zoomIn .2s cubic-bezier(.42, 0, .58, 1);
+}
+
+.is-hide {
+    opacity: 0
+}
+
+
+/*Chatbox scrollbar*/
+
+ ::-webkit-scrollbar {
+    width: 6px;
+}
+
+ ::-webkit-scrollbar-track {
+    border-radius: 0;
+}
+
+ ::-webkit-scrollbar-thumb {
+    margin: 2px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+
+/*Element state*/
+
+.is-active {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.is-float {
+    box-shadow: 0 0 6px rgba(0, 0, 0, .16), 0 6px 12px rgba(0, 0, 0, .32);
+}
+
+.is-loading {
+    display: block;
+    -webkit-animation: load 1s cubic-bezier(0, .99, 1, 0.6) infinite;
+    animation: load 1s cubic-bezier(0, .99, 1, 0.6) infinite;
+}
+
+
+/*Animation*/
+
+@-webkit-keyframes zoomIn {
+    0% {
+        /* -webkit-transform: scale(0); */
+        transform: translateY(176%);
+        /* height: 0!important; */
+        opacity: 0.0;
+        /* transition: all 1.2s ease-in-out; */
+    }
+    100% {
+        /* -webkit-transform: scale(1); */
+        /* transform: scale(1); */
+        transition: all 1.2s ease-in-out;
+        transform: translateY(100%);
+        /* height: auto!important; */
+        opacity: 1;
+    }
+}
+
+.kdxbgZ {
+    padding: 18px!important;
+}
+
+.eZEgcx,
+.izlSME {
+    display: none!important;
+}
+
+.ewIAEB {
+    padding-bottom: 100px!important;
+}
+
+
+/* SMARTPHONES PORTRAIT */
+
+@media only screen and (min-width: 300px) {
+    .chat {
+        width: 60px;
+    }
+}
+
+
+/* SMARTPHONES LANDSCAPE */
+
+@media only screen and (min-width: 480px) {
+    .chat {
+        width: 70px;
+    }
+    .chat_field {
+        width: 65%;
+    }
+}
+
+
+/* TABLETS PORTRAIT */
+
+@media only screen and (min-width: 768px) {
+    .chat {
+        width: 70px;
+    }
+    .chat_field {
+        width: 65%;
+    }
+}
+
+
+/* TABLET LANDSCAPE / DESKTOP */
+
+@media only screen and (min-width: 1024px) {
+    .chat {
+        width: 70px;
+    }
+    .chat_field {
+        width: 65%;
+    }
+}
+
+.contactmessege-button {
+    right: 24px!important;
+}
+
+#whatsUp-button.contactmessege-button {
+    bottom: 151px!important;
+    ;
+}
+
+#messenger-button.contactmessege-button {
+    bottom: 90px!important;
+    ;
+}
+
+.contactmessege-button-button {
+    width: 55px !important;
+    height: 55px !important;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 1;
+    font-size: 22px;
+    right: 15px;
+    bottom: 15px;
+    transition: .5s;
+    background: #E81C2E;
+    border-radius: 44px;
+    z-index: 9;
+}
+
+.isPopoup-open {
+    bottom: 58px!important;
+    right: 65px!important;
+    /* margin-bottom: 0!important; */
+    transition: .5s ease-in-out all;
+    /* transition: '.2s ease-in-out all' */
+}
+
+.popup-margin {
+    margin-bottom: 96px!important;
+    ;
+}
+
+body {
+    height: 300vh;
+    overflow: scroll;
+}
