@@ -93,17 +93,21 @@ $(document).ready(function() {
         }
     });
 
-    // $(window).resize(function(e) {
-    //     console.log(e)
-    // }).resize();
-    // if (mobilecheck()) {
-    //     $('#handlescroll').addClass('h-scale');
-    //     $('.contactmessege-button-popup').addClass('h-scale-m')
-    // } else {
-    //     $('#handlescroll').removeClass('h-scale');
-    //     $('.contactmessege-button-popup').removeClass('h-scale-m')
-
-    // }
-
-    // console.log(window.innerWidth);
+    // copy text 
+    function copyToClipboard(element) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand("copy");
+        alert('Copied to Clipboard');
+        $temp.remove();
+    }
+    $('#copy-cli').click(function copyToClipboard(element) {
+        var $temp = $("<input>");
+        $("body").append($temp);
+        $temp.val($(element).text()).select();
+        document.execCommand("copy");
+        alert('Copied to Clipboard');
+        $temp.remove();
+    })
 })
