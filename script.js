@@ -94,20 +94,27 @@ $(document).ready(function() {
     });
 
     // copy text 
-    function copyToClipboard(element) {
-        var $temp = $("<input>");
-        $("body").append($temp);
-        $temp.val($(element).text()).select();
-        document.execCommand("copy");
-        alert('Copied to Clipboard');
-        $temp.remove();
+    function copyToClipboard(text) {
+
+        var textArea = document.createElement("textarea");
+        textArea.value = text;
+        document.body.appendChild(textArea);
+        textArea.select();
+
+        try {
+            var successful = document.execCommand('copy');
+            var msg = successful ? 'successful' : 'unsuccessful';
+            console.log('Copying text command was ' + msg);
+        } catch (err) {
+            console.log('Oops, unable to copy', err);
+        }
+        document.body.removeChild(textArea);
     }
-    $('#copy-cli').click(function copyToClipboard(element) {
-        var $temp = $("<input>");
-        $("body").append($temp);
-        $temp.val($(element).text()).select();
-        document.execCommand("copy");
-        alert('Copied to Clipboard');
-        $temp.remove();
-    })
+    $('#copy-cli').click(function() {
+        var clipboardText = "";
+        clipboardText = $('#numPhone').text();
+        console.log(clipboardText);
+        copyToClipboard(clipboardText);
+        alert("Copied to Clipboard");
+    });
 })
